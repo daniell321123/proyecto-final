@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo{
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* header */
+
+header{
+    width: 100%;
+    height: 600px;
+    background: #FC5C7D; 
+     /* fallback for old browsers */
+     background: linear-gradient(to right, hsla(230, 95%, 70%, 0.655), hsla(348, 96%, 67%, 0.421)), url(../images/portada2.jpg);
+      /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(230, 95%, 70%, 0.655), hsla(348, 96%, 67%, 0.421)), url(../images/portada2.jpg); 
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+
+nav > a{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+
+nav > a:hover{
+  text-decoration: underline;
+}
+
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    font-size: 50%px;
+    color: #fff;
+}
+
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* about us */
+
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us{
+    width: 48%;
+}
+
+.sobre-nosotros .contenido-texto{
+    width: 48%;
+}
+
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+
+.contenido-textos h3 span{
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+
+
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* galeria */
+
+.portafolio{
+    background: #f2f2f2;
+}
+
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(263, 91%, 27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 50%;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/* clientes */
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card{
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/* about us */
+
+.container{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+}
+
+.card1{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow:0px 1px 10px  rgba(0, 0, 0, .2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card1:hover{
+    box-shadow:5px 5px 20px  rgba(0, 0, 0, .4);
+    transform: translate(-3%);
+}
+
+.card1 img{
+    width: 100%;
+    height: 210px;
+}
+
+.card1 .contenido{
+    padding: 15px;
+    text-align: center;
+}
+
+.card1 .contenido p{
+    line-height: 1.5;
+    color: #6a6a6a;
+}
+
+.card1 .contenido h3{
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.card1 .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #2fb4cc;
+    border: 1px solid #2fb4cc;
+    border-radius: 4px;
+    transition: all 400ms ease;
+}
+
+.card1 .contenido a:hover{
+    background: #2fb4cc;
+    color: #fff;
+}
+
+/* footer */
+
+footer{
+    background: rgb(216, 155, 243);
+    height: auto;
+    width: 100vw;
+    font-family: 'open sans';
+    padding-top: 40px;
+    color: #fff;
+}
+
+.contenedor-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contenedor-footer h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.contenedor-footer p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    line-height: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.footer-bottom{
+    background: rgb(0, 0, 0);
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.fa{
+    /* text-decoration: none; */
+    margin: 10px;
+}
+
+
+/* contacto */
+
+.body {
+    background: #181818;
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+
+.logo span {
+    color: purple;
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: #61535f;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: #fff;
+    border-bottom: 1px solid purple;
+}
+
+.contact-form form button {
+    background: purple;
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: purple;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+.block1{
+
+   width: 130px;
+}
+
+/* CONTACT INFO */
+.contacto-info {
+    background: rgb(187, 101, 195);
+}
+
+.contacto-info h4, .contacto-info ul, .contacto-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+    /* galeria */
+
+    .imagen-port{
+        width: 44%;
+    }
+
+    /* clientes */
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card{
+        width: 90%;
+    }
+
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+    /* sevicios */
+
+    .container{
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav a{
+        margin-right: 5px;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    /* about us */
+    
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    /* galeria */
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    /* clientes */
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    .body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contacto-info h4,
+    .contacto-info ul,
+    .contacto-info p {
+        text-align: left;
+    }
+}
